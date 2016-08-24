@@ -194,7 +194,7 @@ private func take (numbers: [CGFloat], stride: Int, coords: Coordinates, last: S
     var nums:[CGFloat] = [0, 0, 0, 0, 0, 0];
     
     for var i = 0; i < count; i += stride {
-        for var j = 0; j < stride; j++ {
+        for j in 0 ..< stride {
             nums[j] = numbers[i + j]
         }
         lastCommand = callback(nums, lastCommand, coords)
