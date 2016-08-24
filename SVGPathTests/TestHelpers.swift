@@ -12,7 +12,7 @@ import SVGPath
 func assertCommandsEqual (a:[SVGCommand], _ b:[SVGCommand]) {
     XCTAssertEqual(a.count, b.count, "counts should be the same")
     
-    for var i = 0; i < a.count; i++ {
+    for i in 0 ..< a.count {
         XCTAssertEqual(a[i].type,     b[i].type,     "type should be the same")
         XCTAssertEqual(a[i].point,    b[i].point,    "points should be the same")
         XCTAssertEqual(a[i].control1, b[i].control1, "control point 1 should be the same")

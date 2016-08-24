@@ -193,7 +193,7 @@ private func take (numbers: [CGFloat], stride: Int, coords: Coordinates, last: S
     let count = (numbers.count / stride) * stride
     var nums:[CGFloat] = [0, 0, 0, 0, 0, 0];
     
-    for var i = 0; i < count; i += stride {
+    for i in 0.stride(to: count, by: stride) {
         for j in 0 ..< stride {
             nums[j] = numbers[i + j]
         }
